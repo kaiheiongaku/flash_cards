@@ -30,10 +30,16 @@ class RoundTest < Minitest::Test
     assert_equal [new_turn], @round.turns
     assert_equal [@card_2, @card_3, @card_1], @deck.cards
     assert_equal @card_2, @round.current_card
+
+    @round.take_turn("Venus")
+    assert_equal 2, @round.turns.count
+    assert_equal "Incorrect.", @round.turns.last.feedback
   end
 
   def test_number_correct
     new_turn = @round.take_turn("Juneau")
+    assert_equal 1, @round.number_correct
+    @round.take_turn("Venus")
     assert_equal 1, @round.number_correct
   end
 end
