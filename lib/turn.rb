@@ -9,7 +9,7 @@ class Turn
   end
 
   def correct?
-    if @guess == @card.answer
+    if @guess.delete(".") == @card.answer
       true
     else
       false
