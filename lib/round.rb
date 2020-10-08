@@ -47,4 +47,14 @@ class Round
     (number_correct_by_category(category) /
     total_number_by_category(category).to_f) * 100
   end
+
+  def start
+    puts "Welcome! You're playing with #{@deck.cards.length} cards."
+    puts "---------------------------------------------------------"
+    puts "This is card number #{@turns.length + 1} out of #{@deck.cards.length}."
+    puts "Question: #{@deck.cards.first.question}"
+    input = gets.chomp
+    #pull this out to create a verify answer method
+    if input.downcase.delete(".", )
+  end
 end
