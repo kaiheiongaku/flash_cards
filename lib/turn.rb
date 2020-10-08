@@ -9,11 +9,7 @@ class Turn
   end
 
   def correct?
-    if @guess.delete(".").downcase == @card.answer.downcase
-      true
-    else
-      false
-    end
+    @guess.delete(".").downcase == @card.answer.downcase
   end
 
   def feedback
