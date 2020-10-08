@@ -9,7 +9,7 @@ class Turn
   end
 
   def correct?
-    @guess.delete(".").downcase == @card.answer.downcase
+    @guess.delete(".").downcase == @card.answer.to_s.downcase
   end
 
   def feedback

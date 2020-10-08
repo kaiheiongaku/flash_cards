@@ -30,6 +30,10 @@ class TurnTest < MiniTest::Test
     turn = Turn.new("juneau.", card)
     assert_equal true, turn.correct?
 
+    card = Card.new("When did the U.S. declare independence?", 1776, :Geography)
+    turn = Turn.new("1776", card)
+    assert_equal true, turn.correct?
+
     card = Card.new("Which planet is closest to the sun?", "Mercury", :STEM)
     turn = Turn.new("Saturn", card)
     assert_equal false, turn.correct?
