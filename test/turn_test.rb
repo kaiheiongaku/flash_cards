@@ -34,7 +34,7 @@ class TurnTest < MiniTest::Test
     turn = Turn.new("1776", card)
     assert_equal true, turn.correct?
 
-    card = Card.new("What does Aristotle emphasize", "acting in virtue", :STEM)
+    card = Card.new("What does Aristotle emphasize?", "acting in virtue", :STEM)
     turn = Turn.new("virtue", card)
     assert_equal true, turn.correct?
 

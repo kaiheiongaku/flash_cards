@@ -71,4 +71,8 @@ class RoundTest < Minitest::Test
     assert_equal 100.0, @round.percent_correct_by_category(:Geography)
     assert_equal 0.0, @round.percent_correct_by_category(:STEM)
   end
+
+  def test_list_of_categories
+    assert_equal [:Geography, :STEM], @round.list_of_categories
+  end
 end

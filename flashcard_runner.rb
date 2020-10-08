@@ -10,7 +10,7 @@ card3 = Card.new("What does Thoreau emphasize in 'Walden'?",
                  "simplicity",
                  :Philosophy)
 card4 = Card.new("How does Aristotle argue one becomes virtuous?",
-                 "doing virtuous actions",
+                 "virtue, doing virtuous things",
                  :Philosophy)
 card5 = Card.new("What is the Japanese word for the total harmony of a life?",
                  "ikigai",
